@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  background-image: url('static/bg.png');
+  background-size: contain;
+}
+#wrapper {
+  overflow-x: hidden;
+}
+#chatbox {
+  margin: auto;
+  margin-right: -2rem;
+  background-color: #ffffff;
+  top:30px;
+  right:100px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 30vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 80vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+#chatlog {
+  max-height: calc(70vh - 120px); /* Adjusted height for messages and input area */
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+.message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.bot-message {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  align-self: flex-start;
+}
+.user-message {
+  background-color: #cfe2ff;
+  color: #084298;
+  align-self: flex-end;
+}
+#user-input {
+  width: 95%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px; /* Bottom margin for the input area */
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
+  bottom: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 2px rgb(85, 82, 82);
+  border-radius: 5px;
+  box-shadow: 2px 10px 20px 10px rgba(82, 78, 78, 0.1);
+}
+#userText {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 70%;
+}
+.mic {
+  position: absolute;
+  right: 17%;
+  cursor: pointer;
+}
+#userButton {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  #chatbox {
+      margin: 10px;
+      height: 80vh;
+  }
+}
+.btn-outline-success {
+  background-color: #0b5ed7;
+  padding: 0.3rem 2.3rem;
+  color: white;
+  font-size: 18px;
+  z-index: 0;
+}
+.btn-outline-success:hover {
+  cursor: pointer;
+}
+.navbar {
+  height: 65.8px;
+}
+.navbar-brand {
+  margin-left: 10px;
+}
+.mic-recording {
+  border: 2px solid red;
+  border-radius: 50%;
+  padding: 5px;
+}
+.image-slider{
+  filter: drop-shadow(0 0 10px grey);
+}
