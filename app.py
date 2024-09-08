@@ -26,7 +26,7 @@ def format_text(text):
     return text
 
 
-s = os.getenv('Prefix')
+s = "I am applying for REAP (Rajasthan's engineering colleges' admission) counselling rajasthan. Give a very short and brief result. Generate a data only on basis of REAP counselling. Never say it may vary something like that or you have idea or it is difficult to tell. I don't want real time data, I just want rough idea. Even if you have no idea or it may vary,give a rough idea but never say you don't know.Generate result for:"
 
 
 # Flask-Mail configuration
