@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Engineering Admission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+        .open-sans{
+          font-family: "Open Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          font-variation-settings:
+            "wdth" 100;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-category {
+            margin-bottom: 10px;
+        }
+
+        .accordion {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .accordion:hover {
+            background-color: #0056b3;
+        }
+
+        .panel {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #666;
+        }
+
+        .contact-form {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .checkbox-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="flex flex-col md:flex-row border-2 border-solid border-black h-auto md:h-[80px] relative bg-[#0094fe] p-4">
+    
+    <div class="flex items-center mb-4 md:mb-0">
+        <img src="../static/loginLogo.png" alt="Logo" class="w-[90%] h-auto max-w-[250px]">
+    </div>
+
+    
+    <div class="flex flex-col md:flex-row md:space-x-4 md:ml-auto items-center text-center">
+        <a href="{{ url_for('home') }}" class="text-xl text-white hover:text-gray-800 transition duration-300 ease-in-out mb-2 md:mb-0">Home</a>
+
+    
+        <a href="{{ url_for('logout') }}" class="text-l text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out py-2 px-4 rounded-lg">
+            LogOut
+        </a>
+    </div>
+</nav>
+
+    
+        <div class="container">
+            <h1>FAQs - Engineering Admission</h1>
+            <div class="faq-category">
+                <button class="accordion">General</button>
+                <div class="panel">
+                    <div class="faq-item">
+                        <h3>Is there any helpline for REAP -2024 ?</h3>
+                        <p>Yes. Details of Helpline Numbers are as follows: • The Helpline No.- 0141-2702344, 9462015808, 9462015080 (Call between 9 AM to 6 PM Only)</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>I passed my 10th and 12th from Rajasthan still do I need domicile certificate?</h3>
+                        <p>Yes, you require domicile certificate of Rajasthan otherwise you will be considered as out of Rajasthan candidate.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the validity of the Category Certificate (SC / ST / OBC / EWS-Gen.) and PwD certificate?</h3>
+                        <p>1. Certificate of category (SC/ST/OBC/MBC/ EWS/TSP), issued by the competent authority (if applicable). In case of OBC, certificate should not be issued before 01/09/2023. Grace period of certificate is admissible ( which is two years) with an undertaking. <br> 2. Undertaking by OBC/MBC in required format (for non-creamy layer), (in case of grace period). <br>3. Certificate for Persons with Disabilities (PwD), (if applicable). <br>4. Certificate for Ex-Service men, (if applicable).To obtain the most accurate information about the validity period of an OBC certificate, it is recommended to consult the issuing authority or refer to the official government guidelines for OBC reservations and certificates in your region.(for more details refer REAP booklet 2024)</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What are the requirements for EWS candidates?</h3>
+                        <p>The answer would typically include details such as income criteria, documents required (like income certificate), and any specific eligibility conditions set by the authorities for EWS reservations or benefits.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>When will the Online Application form for REAP - 2024-25 Session be available on the website?</h3>
+                        <p>The registration process starts on [27/06/2024 onward] Website: www.reapbtech24.com,www.reapbarch24.com</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Whether the application fee excludes the Common Service charge?</h3>
+                        <p>A fee of Rs 590 /-(500+18%GST) (Rupees Five Hundred plus 18%GST Only) against application cum registration fee for REAP -2024 each mode of counseling process. Registration fee once deposited will neither refundable nor transferable/adjustable against any other counseling mode including REAP in future.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is reservation criteria and Seat Matrix of REAP2024-25?</h3>
+                        <p>find specific information on page 8 in REAP booklet( available on web portal).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What documents to be Carried at the Time of Reporting?</h3>
+                        <p>find specific information on page no. 14 in REAP booklet( available on web portal)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-category">
+                <button class="accordion">Data Correction</button>
+                <div class="panel">
+                    <div class="faq-item">
+                        <h3>How can I change the subject group I selected incorrectly?</h3>
+                        <p>Please raise your complaint on the ticket helpline available in the candidate panel on the portal homepage and please save your ticket number for further communication.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I change my options/choice if I filled them in incorrectly?</h3>
+                        <p>Please raise your complaint on the ticket helpline available in the candidate panel on the portal homepage and please save your ticket number for further communication.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Procedure for Filling Online Application cum Registration and College Choice Form?</h3>
+                        <p>Step-1: Submission of Application cum Registration Form fee. <br>Step-2: Filling of online Application cum registration form and College Choice form. <br>Step-3: Candidates will receive confirmation E-mail/ message at registered E-mail ID/ Mobile number after successful submission of Application cum Registration form and College Choice form. <br>Step-4: Candidates must take Printouts/ Hardcopy only after final submission of online application form and college choice form. Note: - The hardcopy of application form is not required to send/ submit to the REAP-2024 office. Duplicate/Multiple Registrations are not permitted in REAP-24. Candidates are advised to visit the REAP-2024 web portal regularly for latest information. (details are given in booklet page number 11-12)</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Where can I check my subject group?</h3>
+                        <p>find specific information on page no. 28 in REAP booklet( available on web portal):</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I correct my personal details and income information if I can't go back to the previous page?</h3>
+                        <p>Please raise a complaint on the ticket helpline in the candidate panel with all my credentials.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-category">
+                <button class="accordion">Transaction</button>
+                <div class="panel">
+                    <div class="faq-item">
+                        <h3>My registration fees is deducted but registration not done.</h3>
+                        <p>Please check your transaction details on the "Check Transaction Status" link on the candidate control panel using your temporary transaction number. After some time, you will receive your permanent number on your registered email ID also check spam box.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>If any candidate faces any problem in the remittance of fee due to a failed transaction, what can he/she do?</h3>
+                        <p>If the payment status of an online transaction is not communicated by the payment gateway in real time then fee payment is not completed and the candidate will not be able to download the Acknowledgement page. In this case, the candidate is required to pay the fee again through online mode and download the acknowledgment page. The amount due to the failed transaction of online mode will be refunded.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-category">
+                <button class="accordion">Technical Issue</button>
+                <div class="panel">
+                    <div class="faq-item">
+                        <h3>What should I do if I face technical issues on the website?</h3>
+                        <p>If you encounter technical issues, try clearing your browser cache or contact our technical support team for assistance.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I reset my account password?</h3>
+                        <p>You can reset your password by clicking on the "Forgot Password" link on the login page and following the instructions.</p>
+                    </div>
+                </div>
+            </div>
+
+        
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="contact-checkbox"> Didn't find your answer? Submit your issue to us.
+            </label>
+        </div>
+
+        <div class="contact-form" id="contact-form">
+            <form action="/submit_issue" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mobile">Mobile:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <label for="issue">Describe your issue:</label>
+                <textarea id="issue" name="issue" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const panel = button.nextElementSibling;
+                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Show the contact form when the checkbox is checked
+        document.getElementById('contact-checkbox').addEventListener('change', function () {
+            const contactForm = document.getElementById('contact-form');
+            if (this.checked) {
+                contactForm.style.display = 'block';
+            } else {
+                contactForm.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

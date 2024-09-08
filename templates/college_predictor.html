@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+        .open-sans{
+          font-family: "Open Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          font-variation-settings:
+            "wdth" 100;
+        }</style>
+
+
+        
+
+</head>
+
+<body class="overflow-y-hidden">
+    
+    <nav class="flex flex-col md:flex-row border-2 border-solid border-black h-auto md:h-[80px] relative bg-[#0094fe] p-4">
+    
+        <div class="flex items-center mb-4 md:mb-0">
+            <img src="../static/loginLogo.png" alt="Logo" class="w-[90%] h-auto max-w-[250px]">
+        </div>
+    
+        
+        <div class="flex flex-col md:flex-row md:space-x-4 md:ml-auto items-center text-center">
+            <a href="{{ url_for('home') }}" class="text-xl text-white hover:text-gray-800 transition duration-300 ease-in-out mb-2 md:mb-0">Home</a>
+    
+        
+            <a href="{{ url_for('logout') }}" class="text-l text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out py-2 px-4 rounded-lg">
+                LogOut
+            </a>
+        </div>
+    </nav>
+
+    <div class="flex items-center justify-center h-[90vh] ">
+        <form action="/predict" method="post" class="border-solid border-2 p-6 bg-white shadow-lg rounded-md h-[80%] w-[30%] flex flex-col relative">
+            <div class="border-b-2 border-solid">
+                <h2 class="text-center text-xl font-semibold open-sans">College Predictor</h2>
+            </div>
+            
+
+            <label for="gender" class="mt-[3rem] gap-4">Gender:</label>
+            <select name="gender" id="gender" class="border-[1px] border-solid border-black rounded-md cursor-pointer">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+    
+            <label for="sfs_gas">Category (SFS/GAS):</label>
+            <select name="sfs_gas" id="sfs_gas" class="border-[1px] border-solid border-black rounded-md cursor-pointer">
+                <option value="SFS">SFS</option>
+                <option value="GAS">GAS</option>
+            </select>
+            <br>
+    
+            <label for="category">Reservation Category:</label>
+            <select name="category" id="category" class="border-[1px] border-solid border-black rounded-md cursor-pointer">
+                <option value="Gen">General</option>
+                <option value="EWS">EWS</option>
+                <option value="OBC">OBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+            </select>
+            <br>
+    
+            <label for="rank">Rank:</label>
+            <input type="number" id="rank" name="rank" required class="border-[1px] border-solid border-black rounded-md w-[100px] pl-5 cursor-pointer">
+
+
+            <br>
+            <div class="bg-green-500 text-center rounded-lg h-[30px] w-[120px] absolute bottom-[2.5rem] left-[35%] flex items-center justify-center cursor-pointer border-2 border-solid border-green-600 hover:scale-95 hover:shadow-none transition-all duration-200 ease-in-out">
+                <input type="submit" value="Predict" class="bg-transparent text-white">
+            </div>
+            
+            
+        </form>
+    </div>
+    
+</body>
+
+</html>
