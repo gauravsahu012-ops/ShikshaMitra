@@ -60,6 +60,11 @@ issues_collection = db['issues']
 def faq():
     return render_template('faq.html')
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    # Always return success when this route is pinged
+    return jsonify({"success": True}), 200
+
 @app.route('/submit_issue', methods=['POST'])
 def submit_issue():
     name = request.form['name']
