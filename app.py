@@ -40,7 +40,7 @@ app.config['MAIL_DEFAULT_SENDER'] = 'mycardiocare@gmail.com'
 
 mail = Mail(app)
 
-# Configure the Google Generative AI API key
+# Configure the Google's Generative AI API key
 genai.configure(api_key="AIzaSyB-clc5NqNrV1ueQBj-nY4WOqwRRJOgIW8")
 
 # Load your CSV file
