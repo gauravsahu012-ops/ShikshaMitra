@@ -40,8 +40,8 @@
         .underline-custom {
             position: relative;
             display: inline-block;
-            color: inherit; /* Makes sure the color is inherited from parent or default */
-            text-decoration: none; /* Removes default underline */
+            color: inherit; 
+            text-decoration: none; 
         }
         
         .underline-custom::after {
@@ -68,18 +68,19 @@
         </style>
 </head>
 <body class="bg-gray-100">
-    <img src="../static/homebg.avif" class="opacity-50 absolute " alt="">
+    <img src="../static/homebg.avif" class="opacity-60 absolute " alt="">
         
         <div class="h-[80px] relative flex bg-[#00000094] nav">
             <div class="flex items-center">
                 <img src="../static/loginLogo.png" alt="Logo" class="w-[30px] md:w-[200px] h-auto ml-5">
             </div>
             <div class="absolute right-4 md:right-[7.5rem] top-1/2 transform -translate-y-1/2 flex space-x-4">
-                <a href="{{url_for('faq')}}" class="text-sm md:text-xl text-white hover:border-[#0094fe] hover:border-gray-800 transition duration-300 ease-in-out open-sans border-b-2 border-solid border-white">FAQs</a>
+                <a href="{{url_for('faq')}}" class="text-sm md:text-xl text-white hover:text-[#0094fe] hover:border-[#0094fe] transition duration-300 ease-in-out open-sans border-b-2 border-solid border-white">FAQs</a>
             </div>
             <div class="absolute top-1/2 transform -translate-y-1/2 flex items-center justify-center space-x-4 right-4 md:right-2 bg-red-600 h-[40px] md:h-[50px] w-[80px] md:w-[90px] rounded-lg hover:bg-red-700 transition duration-300 ease-in-out">
                 <a href="{{url_for('logout')}}" class="text-l md:text-l text-white">LogOut</a>
             </div>
+
     </div>
     <div class="w-full absolute top-[150px] left-[50%] transform -translate-x-1/2 mt-[5rem]">
         <h1 id="text" class="font-extrabold text-4xl md:text-8xl text-center mb-4 border-solid border-black suse" style="clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);">
