@@ -7,34 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style> 
-        .open-sans{
+        .open-sans {
           font-family: "Open Sans", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: 400;
-          font-style: normal;
-          font-variation-settings:
-            "wdth" 100;
         }
+
         .nerko-one-regular {
-        font-family: "Nerko One", cursive;
-        font-weight: 400;
-        font-style: normal;
+          font-family: "Nerko One", cursive;
         }
-        .suse{
-        font-family: "SUSE", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+
+        .suse {
+          font-family: "SUSE", sans-serif;
         }
 
         .underline-custom {
@@ -59,33 +47,42 @@
             width: 100%;
             left: 0;
         }
-        body{
+
+        body {
            height: 100vh;
-           width:100vw; 
-           overflow:hidden
+           width: 100vw; 
+           overflow: hidden;
         }
-        
-        </style>
+    </style>
 </head>
 <body class="bg-gray-100">
-    <img src="../static/homebg.avif" class="opacity-60 absolute " alt="">
-        
-        <div class="h-[80px] relative flex bg-[#00000094] nav">
-            <div class="flex items-center">
-                <img src="../static/loginLogo.png" alt="Logo" class="w-[30px] md:w-[200px] h-auto ml-5">
-            </div>
-            <div class="absolute right-4 md:right-[7.5rem] top-1/2 transform -translate-y-1/2 flex space-x-4">
-                <a href="{{url_for('faq')}}" class="text-sm md:text-xl text-white hover:text-[#0094fe] hover:border-[#0094fe] transition duration-300 ease-in-out open-sans border-b-2 border-solid border-white">FAQs</a>
-            </div>
-            <div class="absolute top-1/2 transform -translate-y-1/2 flex items-center justify-center space-x-4 right-4 md:right-2 bg-red-600 h-[40px] md:h-[50px] w-[80px] md:w-[90px] rounded-lg hover:bg-red-700 transition duration-300 ease-in-out">
-                <a href="{{url_for('logout')}}" class="text-l md:text-l text-white">LogOut</a>
-            </div>
+    <!-- Background Image -->
+    <img src="../static/homebg.avif" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Background Image">
 
+    <!-- Navbar -->
+    <div class="h-[80px] relative flex bg-[#00000094] nav">
+        <div class="flex items-center">
+            <img src="../static/loginLogo.png" alt="Logo" class="w-[30px] md:w-[200px] h-auto ml-5">
+        </div>
+        <div class="absolute right-4 md:right-[7.5rem] top-1/2 transform -translate-y-1/2 flex space-x-4">
+            <a href="{{url_for('faq')}}" class="text-sm md:text-xl text-white hover:text-[#0094fe] hover:border-[#0094fe] transition duration-300 ease-in-out open-sans border-b-2 border-solid border-white">FAQs</a>
+        </div>
+        <div class="absolute top-1/2 transform -translate-y-1/2 flex items-center justify-center space-x-4 right-4 md:right-2 bg-red-600 h-[40px] md:h-[50px] w-[80px] md:w-[90px] rounded-lg hover:bg-red-700 transition duration-300 ease-in-out">
+            <a href="{{url_for('logout')}}" class="text-l md:text-l text-white">LogOut</a>
+        </div>
     </div>
+
+    <!-- Content -->
     <div class="w-full absolute top-[150px] left-[50%] transform -translate-x-1/2 mt-[5rem]">
-        <h1 id="text" class="font-extrabold text-4xl md:text-8xl text-center mb-4 border-solid border-black suse" style="clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);">
+        <h1 id="text" 
+            class="font-extrabold text-center mb-4 border-solid border-black suse whitespace-nowrap" 
+            style="
+              font-size: clamp(1.5rem, 6vw, 8rem); 
+              clip-path: polygon(0 0, 100% 1%, 100% 100%, 0% 100%);
+            ">
             Welcome to ShikshaMitra
         </h1>
+
         <div class="flex flex-col items-center justify-center text-base md:text-3xl">
             <div class="flex items-center justify-center mt-[2rem] h-[30px] w-[120px] md:h-[50px] md:w-[180px] mb-4">
                 <a href="{{ url_for('chatbot') }}" class="text-center underline-custom open-sans">
@@ -99,17 +96,18 @@
             </div>
         </div>
     </div>
+
     <script>
         let text = new SplitType("#text");
         let characters = document.querySelectorAll('.char');
-        for(i=0; i<characters.length;i++){
+        for (i = 0; i < characters.length; i++) {
             characters[i].classList.add('translate-y-full');
         }
         gsap.to(".char", {
-            y:0,
-            stagger:0.05,
-            delay:0.02,
-            duration:0.5
+            y: 0,
+            stagger: 0.05,
+            delay: 0.02,
+            duration: 0.5
         });
     </script>
 </body>
