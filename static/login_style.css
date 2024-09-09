@@ -1,7 +1,7 @@
 .bgImage{
     background-image: url("../static/loginbg.png");
     background-position: bottom;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-size: contain;
 }
 /* // <uniquifier>: Use a unique and descriptive class name
