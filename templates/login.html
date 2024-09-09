@@ -7,18 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth@0,75..100;1,75..100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@555&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../static/login_style.css">
   </head>
   <body>
-    <div class="flex w-screen min-h-screen overflow-hidden bgImage">
-      <div class="bg-[#f8f7fd] text-[#0094fe] w-[40%]">
-        <img src="../static/loginLogo.png" alt="image2" class="w-[40%] m-5 mt-8 ml-10" />
+    <div class="flex w-screen min-h-screen overflow-hidden bgImage flex-col sm:flex-row items-center sm:items-stretch justify-center sm:justify-start">
+      <div class="bg-[#f8f7fd] text-[#0094fe] w-full sm:w-[40%] leftContent flex flex-col items-center justify-center py-8 sm:py-0">
+        <img src="../static/loginLogo.png" alt="image2" class="w-[40%] m-5 mt-8 sm:ml-10" />
 
-        <h2 class="font-extrabold text-3xl ml-[3.6rem] open-sans">ShikshaMitra</h2>
+        <h2 class="font-extrabold text-3xl open-sans">ShikshaMitra</h2>
         
         <form class="flex flex-col justify-center items-center w-[100%]" action="{{ url_for('login') }}" method="POST">
           <div class="w-[80%] m-5">
@@ -52,7 +50,7 @@
             <button class="m-3 w-[80%] bg-[#0094fe] text-white rounded-lg h-[3.2rem] text-lg btn" type="submit">Log in</button>
           </div>
 
-          <p class="text text-black">
+          <p class="text text-black text-center">
             For demo purposes, use:
             <br />
             username: xyz
@@ -61,8 +59,8 @@
           </p>
         </form>
       </div>
-      <div class="absolute right-[12%] top-[10%] text-[#0094fe] font-extrabold text-2xl">
-        <h2 class="roboto-slab-yoyo">
+      <div class="hidden sm:block absolute right-[12%] top-[10%] text-[#0094fe] font-extrabold text-2xl">
+        <h2 class="roboto-slab-yoyo right">
           Welcome to Your Technical Education Hub:
           <p>Log In to Access Personalized Support</p>
         </h2>
@@ -81,5 +79,5 @@
             button.textContent = 'Show';
         }
     }
-</script>
+  </script>
 </html>
